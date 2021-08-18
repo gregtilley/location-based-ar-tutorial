@@ -1,6 +1,6 @@
 window.onload = () => {
   const button = document.querySelector('button[data-action="change"]');
-  button.innerText = '﹖';
+  button.innerText = '🍺';
 
   let places = staticLoadPlaces();
   renderPlaces(places);
@@ -9,15 +9,10 @@ window.onload = () => {
 function staticLoadPlaces() {
   return [
       {
-        //   name: 'Rosemary Branch',
-        //   location: {
-        //       lat: 51.5376801,
-        //       lng: -0.0886116
-        //   },
-        name: 'Rosemary Branch',
+          name: 'Rosemary Branch',
           location: {
-            lat: 51.53045563195789,
-            lng: -0.07351080034264974
+              lat: 51.5376801,
+              lng: -0.0886116
           },
       },
   ];
@@ -38,6 +33,10 @@ function renderPlaces(places) {
 
       placeText.addEventListener('loaded', () => {
         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+    });
+
+    document.querySelector('button[data-action="change"]').addEventListener('click', function () {
+        alert('Greg would like a neck oil')
     });
 
     scene.appendChild(placeText);
