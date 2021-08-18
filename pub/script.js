@@ -11,8 +11,8 @@ function staticLoadPlaces() {
       {
           name: 'Rosemary Branch',
           location: {
-              lat: 51.5376801,
-              lng: -0.0886116
+              lat: 51.537545300810464, 
+              lng: -0.08690298546200098
           },
       },
   ];
